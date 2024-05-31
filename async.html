@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  array destructuring
+
+      //   let ARR = [1, 2, 3, 4, 5];
+
+      //   let [a, b, c, d, e, f] = ARR;
+
+      //   console.log(f);
+
+      //spread operator
+
+      //   let a = [2, 3, 4];
+      //   let b = [1, ...a, 5, 6];
+      //   console.log(a);
+
+      //   const getBal = (bal, Int) => {
+      //     return Int(bal);
+      //   };
+
+      //   setTimeout(function Int(bal) {
+      //     return (bal * 12) / 100;
+      //   }, 2000);
+
+      //   const res = getBal(12000, Int);
+
+      //   console.log(res);
+
+      //   const abc = new Promise((resolve, reject) => {
+      //     bal = false;
+
+      //     if (bal == true) {
+      //       resolve("task completed");
+      //     } else {
+      //       reject("Task not completed");
+      //     }
+      //   });
+
+      //   abc
+      //     .then((mes) => console.log(mes))
+      //     .catch((error) => console.log(error))
+      //     .finally(() => console.log("Thank you for contacting"));
+
+      const getBal = () => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const Bal = 21000;
+            resolve(Bal);
+            reject("could not get balance");
+          }, 2000);
+        });
+      };
+
+      const getInt = (Bal) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const Int = (Bal * 12) / 100;
+            // resolve(Int);
+            reject("could not get Interest");
+          }, 2000);
+        });
+      };
+
+      const getTen = (Int) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const Ten = Int * 20;
+            resolve(Ten);
+            reject("could not get Tenure");
+          }, 2000);
+        });
+      };
+
+      // getBal()
+      //   .then((Bal) => {
+      //     console.log(Bal);
+      //     return getInt(Bal);
+      //   })
+      //   .then((Int) => {
+      //     console.log(Int);
+      //     return getTen(Int);
+      //   })
+      //   .then((Ten) => console.log(Ten))
+      //   .catch((err) => console.log(err))
+      //   .finally(() => {
+      //     setTimeout(() => {
+      //       console.log("Thank you for contacting");
+      //     }, 2000);
+      //   });
+
+      // async function getMainBal() {
+      //   try {
+      //     const Bal = await getBal();
+      //     console.log(Bal);
+      //     const Int = await getInt(Bal);
+      //     console.log(Int);
+      //     const Ten = await getTen(Int);
+      //     console.log(Ten);
+      //   } catch {
+      //     console.log("Something went wrong");
+      //   } finally {
+      //     setTimeout(() => {
+      //       console.log("thank you for contacting");
+      //     }, 3000);
+      //   }
+      // }
+
+      // getMainBal();
+    </script>
+  </body>
+</html>
